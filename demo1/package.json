@@ -1,0 +1,25 @@
+{
+  "name": "webpack-example",
+  "version": "1.0.0",
+  "description": "A simple webpack example.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors",
+    "watch": "webpack --progress --colors --watch",
+    "server": "webpack-dev-server --progress --colors"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "rgy",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.2"
+  }
+}
