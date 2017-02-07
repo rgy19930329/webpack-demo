@@ -1,11 +1,11 @@
 {
-  "name": "webpack-demo1",
+  "name": "webpack-demo3",
   "version": "1.0.0",
   "description": "A simple webpack example.",
-  "main": "bundle.js",
+  "main": "entry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --colors",
+    "build": "webpack --progress --colors --display-error-details",
     "watch": "webpack --progress --colors --watch",
     "server": "webpack-dev-server --progress --colors"
   },
@@ -20,6 +20,8 @@
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "html-loader": "^0.4.0",
+    "html-webpack-plugin": "^1.7.0"
   }
 }
