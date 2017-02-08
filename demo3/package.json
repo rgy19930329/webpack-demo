@@ -5,9 +5,9 @@
   "main": "entry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --colors --display-error-details",
+    "build": "webpack --progress --colors --display-error-details --config webpack.config_build.js",
     "watch": "webpack --progress --colors --watch",
-    "server": "webpack-dev-server --progress --colors"
+    "server": "webpack-dev-server --progress --colors --inline --hot"
   },
   "keywords": [
     "webpack"
@@ -25,6 +25,7 @@
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.14.0"
   }
 }

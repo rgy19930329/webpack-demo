@@ -15,8 +15,8 @@ module.exports = {
   //   path.resolve(__dirname, './src/js/page/index.js')
   // ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: "./",
+    path: path.join(__dirname, 'dist/'),
+    publicPath: "http://localhost:9000/dist/",
     filename: "js/[name].js",
     chunkFilename: "js/[id].chunk.js"
   },
@@ -51,8 +51,9 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './',
     hot: true,
-    progress: true
+    progress: true,
+    port: '9000'
   }
 };
