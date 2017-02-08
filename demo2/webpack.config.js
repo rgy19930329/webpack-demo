@@ -2,13 +2,21 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+var dir = path.resolve(__dirname, './src/js/page/index.js');
+console.log('============================')
+console.log(dir);
 module.exports = {
+  // entry: "./src/js/page/index.js",
   entry: {
     index: "./src/js/page/index.js",
   },
+  // entry: [
+  //   path.resolve(__dirname, './src/js/page/index.js')
+  // ],
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: "../",
+    publicPath: "./",
     filename: "js/[name].js",
     chunkFilename: "js/[id].chunk.js"
   },
@@ -32,7 +40,7 @@ module.exports = {
     // }),
     new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
       favicon: './src/img/favicon.ico', //favicon路径
-      filename: './view/index.html', //生成的html存放路径，相对于 path
+      filename: './index.html', //生成的html存放路径，相对于 path
       template: './src/view/index.html', //html模板路径
       inject: true, //允许插件修改哪些内容，包括head与body
       hash: true, //为静态资源生成hash值
@@ -43,6 +51,8 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: './dist/view'
+    contentBase: './dist',
+    hot: true,
+    progress: true
   }
 };

@@ -1,28 +1,36 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+// var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   // entry: './dev/entry.js',
   entry: {
-    index: "./dev/entry.js",
+    index: './dev/entry.js',
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: "./",
+    publicPath: './',
     // filename: 'bundle.js',
-    filename: "js/[name].js",
-    chunkFilename: "js/[id].chunk.js"
+    filename: "public/js/[name].js",
+    chunkFilename: "public/js/[id].chunk.js"
   },
   module: {
     loaders: [
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+      // { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') },
+      // { test: /\.less$/, loader: ExtractTextPlugin.extract('style', 'css', 'less') },
+      { test: /\.html$/, loader: 'html-loader' },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=public/img/[name]-[hash].[ext]' }
     ]
   },
   plugins: [
-    new webpack.BannerPlugin('This file is created by rgy'),
+    new webpack.BannerPlugin('This file is created by rgy'), // 添加编译头部信息
+    new webpack.ProvidePlugin({ //加载jq
+      $: 'jquery'
+    }),
+    // new ExtractTextPlugin('public/css/[name].css'), //单独使用style标签加载css并设置其路径
     new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
       // favicon: './src/img/favicon.ico', //favicon路径
       filename: './index.html', //生成的html存放路径，相对于 path
@@ -34,5 +42,8 @@ module.exports = {
       //   collapseWhitespace: true //删除空白符与换行符
       // }
     })
-  ]
+  ],
+  // devServer: {
+  //   contentBase: './dist/'
+  // }
 }

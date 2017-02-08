@@ -1,4 +1,5 @@
-require('./style/common.css');
-require('./style/index.less');
-require('./js/jquery-addons.js');
-require('./js/index.js');
+// common
+require('./public/common/common.css');
+require('./public/common/jquery-addons.js');
+// pages
+require('./view/app/app.js');

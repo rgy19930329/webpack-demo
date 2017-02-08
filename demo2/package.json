@@ -7,7 +7,9 @@
     "test": "null",
     "build": "webpack --progress --colors",
     "watch": "webpack --progress --colors --watch",
-    "server": "webpack-dev-server --progress --color"
+    "server": "webpack-dev-server --progress --colors --inline --hot",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "hot": "webpack-dev-server --devtool eval --progress --colors --hot --content-base"
   },
   "keywords": [
     "webpack",

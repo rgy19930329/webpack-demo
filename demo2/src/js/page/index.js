@@ -10,3 +10,5 @@ $('#btn').on('click', function(){
     new Dialog(new Date() - 0);
   });
 });
+
+console.log('sdfsd11234fdsafd');

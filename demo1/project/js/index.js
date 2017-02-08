@@ -1,3 +1,3 @@
-console.log('testxyz000xxx');
+console.log('testxyz');
 
-module.exports = 'It works from module.js.'
+// module.exports = 'It works from module.js.'

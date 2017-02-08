@@ -155,9 +155,9 @@ module.exports = {
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
     ]
   },
-  resolve: {
-    extensions: ['.less', '.js', '.html']
-  },
+  // resolve: {
+  //   extensions: ['.less', '.js', '.html']
+  // },
   plugins: [
     new webpack.BannerPlugin('This file is created by rgy')
   ],
