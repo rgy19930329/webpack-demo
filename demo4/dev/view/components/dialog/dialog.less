@@ -1,0 +1,28 @@
+.dialog {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #f60;
+  border: 2px solid #f60;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  position: relative;
+  .icon-del {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #f60;
+    border-bottom: 2px solid #f60;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      color: darken(#f60, 10%);
+    };
+  }
+}

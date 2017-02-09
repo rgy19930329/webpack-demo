@@ -1,0 +1,32 @@
+{
+  "name": "webpack-demo3",
+  "version": "1.0.0",
+  "description": "A simple webpack example.",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors --display-error-details --config webpack.config_build.js",
+    "watch": "webpack --progress --colors --watch",
+    "server": "webpack-dev-server --progress --colors --inline --hot"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "rgy",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.0",
+    "html-webpack-plugin": "^1.7.0",
+    "jquery": "^3.1.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.0",
+    "url": "^0.11.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.14.0"
+  }
+}

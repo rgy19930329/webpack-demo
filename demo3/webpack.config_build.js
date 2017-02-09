@@ -1,3 +1,4 @@
+// 打包单页应用
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
