@@ -13,6 +13,7 @@ module.exports = function(text){
     sid: sid
   };
   var html = bt( tpl, data );
+  console.log(bt)
   $('#content').append(html);
 
   var $dialog = $('#' + sid),
