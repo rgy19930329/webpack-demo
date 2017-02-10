@@ -3,7 +3,9 @@ var bt = require('../../../components/baiduTmpl/index.js'),
 //加载模块CSS
 require('./dialog.less');
 //加载模板
-var tpl = require('./dialog.html');
+// var tpl = bt( require('./dialog.html') );
+var tpl = require('./dialog.tmpl');
+console.log(tpl);
 
 module.exports = function(text){
   var sid = 'dialog-' + utils.randomString(5);
@@ -12,9 +14,7 @@ module.exports = function(text){
     text: text,
     sid: sid
   };
-  var html = bt( tpl, data );
-  console.log(bt)
-  $('#content').append(html);
+  $('#content').append(tpl(data));
 
   var $dialog = $('#' + sid),
       $delBtn = $dialog.find('.icon-del');
