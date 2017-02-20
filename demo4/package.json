@@ -24,6 +24,8 @@
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.0",
+    "tmpl-loader": "^0.0.1",
+    "tmple-loader": "0.0.1",
     "url": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.2",

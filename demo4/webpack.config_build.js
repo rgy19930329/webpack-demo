@@ -20,6 +20,7 @@ module.exports = {
       { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
       { test: /\.html$/, loader: 'html-loader' },
       { test: /\.tmpl$/, loader: 'tmpl-loader' },
+      { test: /\.tjs$/, loader: 'tmple-loader' },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=public/img/[name]-[hash].[ext]' },
       // bootstrap fonts
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?&name=public/bootstrap/fonts/[name].[ext]" },
