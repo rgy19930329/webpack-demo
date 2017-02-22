@@ -6,7 +6,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './dev/view/app/app.js',
-    about: './dev/view/about/about.js'
+    about: './dev/view/about/about.js',
+    progress: './dev/view/progress/progress.js',
   },
   output: {
     path: path.join(__dirname, 'dist/'),
@@ -18,7 +19,7 @@ module.exports = {
     loaders: [
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
-      { test: /\.html$/, loader: 'html-loader' },
+      { test: /\.(html|tmpl)$/, loader: 'html-loader' },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=public/img/[name]-[hash].[ext]' },
       // bootstrap fonts
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?&name=public/bootstrap/fonts/[name].[ext]" },
@@ -46,7 +47,14 @@ module.exports = {
       inject: true, //允许插件修改哪些内容，包括head与body
       hash: true, //为静态资源生成hash值
       chunks: ['about']
-    })
+    }),
+    new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
+      filename: './progress.html', //生成的html存放路径，相对于 path
+      template: './dev/index.html', //html模板路径，相对于当下 path
+      inject: true, //允许插件修改哪些内容，包括head与body
+      hash: true, //为静态资源生成hash值
+      chunks: ['progress']
+    }),
   ],
   devServer: {
     contentBase: './dist',

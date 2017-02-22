@@ -1,7 +1,7 @@
 {
-  "name": "webpack-demo3",
+  "name": "webpack-demo5",
   "version": "1.0.0",
-  "description": "A simple webpack example.[ 初步单页应用 ]",
+  "description": "A simple webpack example.[ 多页面 + backbone局部单页面 ]",
   "main": "entry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +24,8 @@
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.0",
+    "underscore": "^1.8.3",
+    "url": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.14.0"

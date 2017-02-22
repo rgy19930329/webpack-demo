@@ -1,7 +1,7 @@
 {
   "name": "webpack-demo2",
   "version": "1.0.0",
-  "description": "A simple webpack example.",
+  "description": "A simple webpack example.[ 动态刷新 ]",
   "main": "index.js",
   "scripts": {
     "test": "null",

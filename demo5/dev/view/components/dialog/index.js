@@ -4,7 +4,6 @@ var bt = require('../../../components/baiduTmpl/index.js'),
 require('./dialog.less');
 //加载模板
 var tpl = bt( require('./dialog.html') );
-console.log(tpl);
 
 module.exports = function(text){
   var sid = 'dialog-' + utils.randomString(5);
