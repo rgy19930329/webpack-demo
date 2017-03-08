@@ -1,0 +1,50 @@
+.elem {
+  background: #f60;
+  height: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.cwrap-1 .elem {
+  grid-column: 1/4 !last;
+}
+
+.cwrap-1 .last {
+  margin-right: grid-gutter(0);
+}
+
+.cwrap-2 .elem {
+  grid-column: 1/4;
+}
+
+.cwrap-2 .last {
+  margin-right: grid-gutter(0);
+}
+
+.cwrap-3 .elem {
+  grid-column: 1/3;
+}
+
+.cwrap-3 .last {
+  margin-right: grid-gutter(0);
+}
+
+.cwrap-4 .elem {
+  grid-column: 1/2;
+}
+
+.cwrap-4 .last {
+  margin-right: grid-gutter(0);
+}
+
+.cwrap-5 .elem {
+  grid-column: 1/1;
+}
+
+.cwrap-5 .last {
+  margin-right: grid-gutter(0);
+}
+
