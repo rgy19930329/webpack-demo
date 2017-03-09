@@ -25,7 +25,7 @@ var Step1View = Backbone.View.extend({
 
   render: function() {
     console.log('step1-view');
-
+    
     this.$el.html(this.template({
       data: {}
     }));

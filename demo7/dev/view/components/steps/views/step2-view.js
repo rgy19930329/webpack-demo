@@ -31,9 +31,9 @@ var Step2View = Backbone.View.extend({
     var _this = this;
     console.log('step2-view');
 
-    this.$el.html(this.template({
-      data: _this._step1Data
-    }));
+    // this.$el.html(this.template({
+    //   data: _this._step1Data
+    // }));
 
     return this;
   },
